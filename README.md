@@ -30,6 +30,15 @@ Just like that, you have a RESTful API running on your machine.
 | `API_CONTACT_EMAIL` | The email of the API contact | ` ` |
 | `API_TITLE` | The title of the API | `RESTful Todo API documentation` |
 
+### Testing
+#### Prerequisites
+- [dotenv cli](https://pypi.org/project/python-dotenv/)
+```bash
+echo > db.sqlite3 ; dotenv cargo test tests::register -- --test-threads 1
+dotenv cargo test tests::login -- --test-threads 1
+dotenv cargo test tests::revoke -- --test-threads 1
+```
+
 ## Soon
 - [X] Swagger UI for API documentation
 - [X] Rate limiting

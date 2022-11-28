@@ -13,6 +13,9 @@ mod errors;
 mod ratelimit;
 mod schemas;
 
+#[cfg(test)]
+mod tests;
+
 /// Enishalize the database connection pool, return the database connection and if the database is existed.
 /// ### Panics
 /// * If can't get the database url from the environment
